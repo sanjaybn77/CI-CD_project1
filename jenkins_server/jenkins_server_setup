@@ -1,0 +1,22 @@
+ 1  docker --version
+ --> if you don't have docker then install the docker
+    2  yum install docker -y
+    --> installed
+    3  systemctl start docker
+    --> start docker container
+    4  systemctl enable docker
+    --> enable the docker container
+    5  docker --version
+    6  docker run -d -p 8080:8080 -p 50000:50000 jenkins/jenkins:lts
+    --> run the jenkins image through the docker container so jenkins master(server) port number is 8080
+    	and jenkins agent(slave) port number is 50000 and
+	jenkins image name in docker is jenkins/jenkins:lts
+    7  docker ps -a
+    --> to check the how many process are running in docker hub
+    8  docker exec -it 1b73b17bce9b /bin/bash
+    --> this command is to go inside the jenkins container
+    	8.1 cd var/jenkins_server/secrets/initialadminpassword
+
+    	8.2 exit
+    
+
