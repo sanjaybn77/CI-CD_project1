@@ -1,0 +1,27 @@
+pipeline {
+    agent {
+        label "tech_farm"
+    }
+
+    stages {
+        stage('step 1 clone') {
+            steps {
+                echo 'here we cloning our project through git'
+             git 'https://github.com/vincloud2/Helloworld-latest.git'   
+            }
+        }
+        stage('step 2 build') {
+            steps {
+                echo 'here we build our project through maven'
+                sh 'mvn clean package'
+            }
+        }
+        stage('step 3 upload to application server') {
+            steps {
+                echo 'here we uploading our project into tomcat server'
+                deploy adapters: [tomcat8(credentialsId: 'fd6a0f1e-1fb9-494b-a22e-914fe632f7d4', path: '', url: 'http://54.248.171.241:8080/')], contextPath: null, war: '**/*.war'
+            }
+        }
+    }
+}
+
