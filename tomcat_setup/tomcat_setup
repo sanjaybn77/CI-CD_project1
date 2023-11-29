@@ -1,0 +1,45 @@
+  1  wget https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.96/bin/apache-tomcat-8.5.96.tar.gz
+  	-- tomcat tar file 
+    2  ls -l
+    3  tar -zvxf apache-tomcat-8.5.96.tar.gz
+    	-- unzip tar file
+    4  ls -l
+    5  cd apache-tomcat-8.5.96/
+    6  ll
+    7  cd bin
+    8  ./startup.sh
+    	-- to start the tomcat application server
+    9  yum install java-11 -y
+    	-- to install the java file because dependency
+   10  ll
+   11  cd apache-tomcat-8.5.96/
+   12  ll
+   13  cd conf/
+   14  ll
+   15  vim tomcat-users.xml
+   	-- to give the manager credential 
+   16  cd ..
+   17  ll
+   18  cd webapps/
+   19  ll
+   20  cd host-manager/
+   21  cd META-INF/
+   22  ll
+   23  vim context.xml
+   	-- to remove the valve line 127.0.0.0
+   24  cd ../../..
+   25  ll
+   26  cd webapps/
+   27  ll
+   28  cd manager/META-INF/
+   29  vim context.xml
+   	--  to remove the valve line 127.0.0.0
+   30  cd ..
+   31  ll
+   32  cd ../..
+   33  cd bin/
+   34  ./shutdown.sh
+   35  ll
+   36  ./startup.sh
+   	-- to restart
+BOB
