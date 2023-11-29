@@ -1,0 +1,15 @@
+   1) to paste the agent command
+   	--> curl command
+	
+   2) to download the java 
+   	--> dependency
+
+   3) to paste the agent jar file
+   	--> give "&" at the last of jar command
+
+   
+   4) yum install git -y
+   	--> install git s/w
+   5) yum install maven -y
+   	--> install maven for dependecy
+
