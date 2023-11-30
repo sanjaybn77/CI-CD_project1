@@ -9,7 +9,7 @@
 
    
    4) yum install git -y
-   	--> install git s/w
+   	--> install git tool for clone the project
    5) yum install maven -y
-   	--> install maven for dependecy
+   	--> install maven tool for build the project and generate .war package
 
